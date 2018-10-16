@@ -1,0 +1,17 @@
+<% include header %>
+<% if(messages){ %>
+<% for(var message in messages){  %>
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="text-muted pull-right">
+            
+        </div>
+        <%= messages[message]['user'] %>
+      </div>
+      <div class="panel-body">
+        <%= messages[message]['message'] %>
+      </div>
+    </div>
+<% } %>
+<% } %>
+<% include footer %>

@@ -1,0 +1,17 @@
+<% include header %>
+
+<h2>Nieuw bericht in gastenboek</h2>
+<form method="post" role="form">
+  <div class="form-group">
+    <label for="name">Naam</label>
+    <input class="form-control" type="text" name="name" placeholder="Andy" id="name" required>
+  </div>
+  <div class="form-group">
+    <label for="body">Bericht:</label>
+    <textarea class="form-control" name="message" placeholder="Wat een leuke workshop!" rows="3" id="message" required></textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Opslaan!</button
+  </div>
+</form>
+<% include footer %>

@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: my-guestbook
+  name: my-guestbook
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: my-guestbook
+  template:
+    metadata:
+      labels:
+        run: my-guestbook
+    spec:
+      containers:
+      - env:
+        - name: NAME
+          value: Andy
+        - name: DATABASE_TYPE
+          value: mysql
+        image: sbpdemo/guestbook:user1
+        name: my-guestbook
+        resources:
+          limits:
+            cpu: 150m
+            memory: 512Mi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80

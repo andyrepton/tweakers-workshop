@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <img src="https://www.dennusb.nl/tweakersworkshop.png">
+    <title>Gastenboek</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>
+            <% if(!name){ %>
+            Gastenboek van onbekend
+            <% }else{ %>
+            Gastenboek van <%= name %>
+            <%  } %>
+            <a class="btn btn-primary pull-right" href="/new">
+              <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Schrijf wat!
+            </a>
+          </h1>
+        </div>
+      </div>
