@@ -8,18 +8,19 @@
 
 ## Repository
 
-Clone this repository:
+Clone this repository and go to the directory:
 
 ```bash
 git clone $REPO
+cd guestbook
 ```
 
 ## Workshop 2-2
 
-Create our Dockerfile
+Create our Dockerfile in the guestbook directory
 
 ```bash
-cd tweakers-workshop
+cd guestbook
 vim Dockerfile
 ```
 
